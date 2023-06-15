@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentation </title>
+   
+    <link rel="stylesheet" href="../doc-global.css">
+    <link rel="stylesheet" href="../partial-doc.css">
+    
+  </head>
+  <body>
+   
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn"><a href="#title">URL</a></li>
+          <li class="js-btn"><a href="#details">Path details</a></li>
+          <li class="js-btn"><a href="#response">Response</a></li>
+          <li class="js-btn"><a href="#supplements">Supplements</a></li>
+        
+        </ul>
+         <ul>
+          <li class="js-btn"><a href="index.html">List of recipe</a></li>
+          <li class="js-btn"><a href="get.html">Get a recipe</a></li>
+          <li class="js-btn"><a href="post.html">Create a recipe</a></li>
+          <li class="js-btn"><a href="put.html">Update a recipe</a></li>
+          <li class="js-btn"><a href="delete.html">Delete a recipe</a></li>
+        
+        
+        </ul>
+         <ul>
+          
+           <li class="js-btn"><a href="../image/upload.html">Upload an image</a></li>
+          
+          <li class="js-btn"><a href="../image/delete.html">Delete an image</a></li>
+        
+        </ul>
+     
+     
+      </aside>
+      <article class="doc__content">
+         <section class="js-section" id="title">
+          <h3 class="section__title">DELETE/recipes?id=idRecipe?token=userToken</h3>
+          <p>Supprimer une recette</p>
+        </section>
+        <section class="js-section" id="details">
+          <h3 class="section__title">Paramettres de la requette</h3>
+         
+       
+          
+          <table id="customers">
+            <tr>
+              <th>Parametres</th>
+              <th>Types</th>
+              <th>Requis</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>idRecipe</td>
+              <td>Entier</td>
+              <td>OUI</td>
+              <td>Identifiant de la recette a supprimer</td>
+            </tr>
+            <tr>
+              <td>token</td>
+              <td>String</td>
+              <td>OUI</td>
+              <td>Token d'identification de l'utilisateur</td>
+            </tr>
+           
+          </table>
+       </section>
+        <section class="js-section" id="response">
+          <h3 class="section__title">Exemple de reponse</h3>
+            <pre class="code code--block">
+         <code>
+             $ {
+                   
+                    "adoptedTitle": "Jus de raisins",
+                    "createdAt":"2021-08-06T17:04:26.000Z"
+                    "fullName": 4,
+                    "likes":4,
+                    "updatedAt":"2021-08-06T17:04:26.000Z"
+
+                }
+              </code>
+            </pre>
+         
+           <section class="js-section" id="supplements">
+          <h3 class="section__title">Details de reponse</h3>
+          
+       
+        
+        </section>
+        </section>
+       
+      </article>
+    </div>
+
+    
+  </body>
+</html>

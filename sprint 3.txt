@@ -1,0 +1,13 @@
+sprint 3 :
+
+1-Afficher la liste d'epicerie
+2-Ajouter une recette a la liste d'epicerie
+3-Afficher les etapes d'une recette
+
+4-Rechercher une recette
+5-Gerer les filtres
+
+4-Creation de la page de login
+5-Creation de la page d'inscription
+
+

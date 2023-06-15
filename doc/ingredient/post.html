@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation </title>
+
+  <link rel="stylesheet" href="../doc-global.css">
+  <link rel="stylesheet" href="../partial-doc.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="doc__nav">
+      <ul>
+        <li class="js-btn"><a href="#title">URL</a></li>
+        <li class="js-btn"><a href="#details">Body details</a></li>
+        <li class="js-btn"><a href="#response">Response</a></li>
+        <li class="js-btn"><a href="#supplements">Supplements</a></li>
+
+      </ul>
+
+      <ul>
+
+        <li class="js-btn"><a href="index.html">Ingredient</a></li>
+        <li class="js-btn"><a href="post.html">Create an ingredient</a></li>
+        <li class="js-btn"><a href="delete.html">Delete an ingredient</a></li>
+
+      </ul>
+    </aside>
+    <article class="doc__content">
+      <section class="js-section" id="title">
+        <h3 class="section__title">POST/ingredients?token=userToken</h3>
+        <p>Creer un ingredient</p>
+
+      </section>
+      <section class="js-section" id="details">
+        <h3 class="section__title">Parametres de la requette</h3>
+
+        <table id="customers">
+          <tr>
+            <th>Parametres</th>
+            <th>Types</th>
+            <th>Requis</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>token</td>
+            <td>String</td>
+            <td>OUI</td>
+            <td>Token d'identification de l'utilisateur</td>
+          </tr>
+
+
+        </table>
+
+      </section>
+      <section class="js-section" id="details">
+        <h3 class="section__title">Parametres du BODY de la requette</h3>
+        <div class="code__block code__block--notabs">
+          <pre class="code code--block">
+              <code>
+             $ {
+                    "adoptedTitle": "",
+                    "proposedTitle": "Tomate",
+                    "categories": [idCategorie1,idCategorie2,idCategorie3],
+                    "authorId": 3,
+                }
+              </code>
+            </pre>
+        </div>
+        <table id="customers">
+          <tr>
+            <th>Attributs</th>
+            <th>Valeurs</th>
+            <th>Defaut</th>
+          </tr>
+          <tr>
+            <td>adoptedTitle</td>
+            <td>Titre qui sera adoptee pour l'ingredient une fois qu'elle sera validee</td>
+            <td>""</td>
+          </tr>
+          <tr>
+            <td>proposedTitle</td>
+            <td>Titre propose par le createur de l'ingredient</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>categories</td>
+            <td>Liste des categories de l'ingredient</td>
+            <td>[]</td>
+          </tr>
+        </table>
+
+      </section>
+      <section class="js-section" id="response">
+        <h3 class="section__title">Exemple de reponse</h3>
+        <pre class="code code--block">
+         <code>
+             $ {
+                    "id": 2,
+                    "adoptedTitle": "",
+                    "proposedTitle": "Tomate",
+                    "idCategories": [1,3,2],
+                    "authorId": 4,
+                }
+              </code>
+            </pre>
+
+        <section class="js-section" id="supplements">
+          <h3 class="section__title">Details supplementaire de reponse</h3>
+
+          <table id="customers">
+            <tr>
+              <th>attributs</th>
+              <th>Valeurs</th>
+              <th>Defaut</th>
+            </tr>
+            <tr>
+              <td>id</td>
+              <td>Identifiant attribue par le SGBD</td>
+              <td></td>
+            </tr>
+          </table>
+
+        </section>
+      </section>
+
+    </article>
+  </div>
+
+
+</body>
+
+</html>

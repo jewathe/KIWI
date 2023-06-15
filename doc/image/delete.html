@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentation </title>
+   
+    <link rel="stylesheet" href="../doc-global.css">
+    <link rel="stylesheet" href="../partial-doc.css">
+    
+  </head>
+  <body>
+   
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn"><a href="#title">URL</a></li>
+          <li class="js-btn"><a href="#details">Body details</a></li>
+          <li class="js-btn"><a href="#response">Response</a></li>
+          <li class="js-btn"><a href="#supplements">Supplements</a></li>
+        
+        </ul>
+     
+        <ul>
+          
+           <li class="js-btn"><a href="upload.html">Upload an image</a></li>
+          
+          <li class="js-btn"><a href="delete.html">Delete an image</a></li>
+        
+        </ul>
+        <ul>
+          
+          <li class="js-btn"><a href="../recipe/index.html"><b>Recipe</b></a></li>
+          <li class="js-btn"><a href="../recipe/post.html">Create a recipe</a></li>
+          <li class="js-btn"><a href="../recipe/put.html">Update a recipe</a></li>
+          <li class="js-btn"><a href="../recipe/delete.html">Delete a recipe</a></li>
+        
+        </ul>
+      </aside>
+      <article class="doc__content">
+        <section class="js-section" id="title">
+           <h3 class="section__title">DELETE/recipes/:id/upload/images/:imageId/?token=userToken</h3>
+          <p>Suppriimer une image a une recette</p>
+         
+        </section>
+         <section class="js-section" id="details">
+          <h3 class="section__title">Parametres de la requette</h3>
+         
+          <table id="customers">
+            <tr>
+              <th>Parametres</th>
+              <th>Types</th>
+              <th>Requis</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>id</td>
+              <td>int</td>
+              <td>OUI</td>
+              <td>identifiant de la recette sur laquelle sera effectuee la suppression de l'image</td>
+            </tr>
+            <tr>
+              <td>imageId</td>
+              <td>int</td>
+              <td>OUI</td>
+              <td>identifiant d'image a supprimer</td>
+            </tr>
+            <tr>
+              <td>token</td>
+              <td>String</td>
+              <td>OUI</td>
+              <td>Token d'identification de l'editeur  de la recette</td>
+            </tr>
+           
+           
+          </table>
+        
+        </section>
+       
+       
+       
+      </article>
+    </div>
+
+    
+  </body>
+</html>

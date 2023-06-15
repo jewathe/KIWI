@@ -1,0 +1,586 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    height: 100vh;
+  }
+
+  header{
+    margin: 10px;
+  }
+
+  header .homeNav ul{
+    list-style: none;
+}
+
+header .homeNav ul li{
+    margin-left: 100px;
+    display:inline-block;
+}
+
+header .homeNav ul li a{ /* tous les liens a à l'intérieur de la balise nav */
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+}
+    
+
+    header .homeNav ul li::after{
+        content: '';
+        width: 0%;
+        height: 3px;
+        background: black;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+    
+    header .homeNav ul li:hover::after{
+        width: 100%;
+    }
+    
+    .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 25px 25px 25px rgba(0,0,0,0.5);
+      }
+      
+      .center form{
+        padding: 0 40px;
+        box-sizing: border-box;
+      }
+      
+      .center form input{
+        width: 100%;
+        padding: 0 5px;
+        font-size: 16px;
+        border: solid 1px grey;
+        background: none;
+        outline: none;
+      }
+      
+      .center form input:focus{
+        border: solid green 1px;
+        transition: 1s;
+      }
+      
+      .center button{
+        width: 100%;
+        margin: 5px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+      }
+      
+      .center button:hover{
+        background-color: white;
+        color: black;
+        transition: 1s;
+      }
+      
+    .recipeNav a{ /* tous les liens a à l'intérieur de la balise nav */
+      margin-left: 450px;
+      text-decoration: none; /* pas d'héritage avec effet souligné */
+      color: black; /* couleur du texte */
+      height: 36px; /* hauteur */
+      line-height: 33px; /* interligne */
+      padding: 0 10px; /* marges intérieur */
+      font-family: sans-serif; /* police d'écriture */
+      font-size: 13px; /* taille du texte */
+      transition: .5s; /* temps de transition lors du hover : une demi seconde */
+      cursor: pointer;
+    }
+
+    .recipeNav a:hover{
+      color: red;
+    }
+
+    .ingredientNav a{ /* tous les liens a à l'intérieur de la balise nav */
+      margin-left: 450px;
+      text-decoration: none; /* pas d'héritage avec effet souligné */
+      color: black; /* couleur du texte */
+      height: 36px; /* hauteur */
+      line-height: 33px; /* interligne */
+      padding: 0 10px; /* marges intérieur */
+      font-family: sans-serif; /* police d'écriture */
+      font-size: 13px; /* taille du texte */
+      transition: .5s; /* temps de transition lors du hover : une demi seconde */
+      cursor: pointer;
+    }
+    
+    .ingredientNav a:hover{
+      color: red;
+    }
+
+    .categoryNav a{ /* tous les liens a à l'intérieur de la balise nav */
+      margin-left: 450px;
+      text-decoration: none; /* pas d'héritage avec effet souligné */
+      color: black; /* couleur du texte */
+      height: 36px; /* hauteur */
+      line-height: 33px; /* interligne */
+      padding: 0 10px; /* marges intérieur */
+      font-family: sans-serif; /* police d'écriture */
+      font-size: 13px; /* taille du texte */
+      transition: .5s; /* temps de transition lors du hover : une demi seconde */
+      cursor: pointer;
+    }
+        
+    .categoryNav a:hover{
+        color: red;
+    }
+    
+    .detailsIngredient ul li{
+        list-style-type: none;
+    }
+
+    #etapeRecette li{
+        list-style-type: none;
+    }
+
+    .left #imageRecette{
+        width: 400px;
+        height: 300px;
+    }
+
+    .detailsRecette{
+    max-width: 75%;
+    margin: auto;
+    height: 80vh;
+    margin-top: 5%;
+    background: white;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    }
+
+    input[value="Ajouter ingredients"]{
+        width: 30%;
+        height: 30px;
+        border: 1px solid;
+        background: black;
+        border-radius: 25px;
+        font-size: 10px;
+        color: #e9f4fb;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+      }
+
+      input[value="Ajouter à mes recettes favories"]{
+        width: 35%;
+        height: 30px;
+        border: 1px solid;
+        background: black;
+        border-radius: 25px;
+        font-size: 10px;
+        color: #e9f4fb;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+      }
+
+      input[value="Ajouter à ma liste d'épicerie"]{
+        width: 35%;
+        height: 30px;
+        border: 1px solid;
+        background: black;
+        border-radius: 25px;
+        font-size: 10px;
+        color: #e9f4fb;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .right h4{
+        align-items: center;
+        font-size: 30px;
+        margin-top: 50px;
+      }
+
+      .boutton{
+        max-width: 100%;
+        margin-left: 250px;
+      }
+
+      .boutton input[type='button']:hover{
+        color: black;
+        background-color: white;
+        transition: 1s;
+      }
+
+      .detailsRecette .left #etapeRecette{
+        margin-left: 50px;
+      }
+
+      .detailsIngredient{
+        margin-left: 25%;
+      }
+
+      .listesRecettes{
+        width: 100%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      
+
+      .listeRecette #imageRecette{
+        width: 100%;
+        height: 290px;
+      }
+
+      .listeRecette{
+        padding: 10px;
+        margin: 3px;
+        text-align: center;
+        border-radius: 5px;
+        max-width: 75%;
+        margin: auto;
+        height: 65vh;
+        margin-top: 5%;
+        background: white;
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+      }
+      
+
+      .listeRecette strong{
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+
+      .listeRecette:hover{
+        transform: scale(1.1);
+      }
+
+      .listeRecette input[type='button']{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+        border-radius: 10px;
+        background-color: white;
+      }
+
+      .listeRecette input[type='button']:hover{
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+      }
+      
+      .listesIngredients{
+        width: 100%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      .listeIngredient img{
+        width: 50%;
+        height: 100px;
+      }
+
+      .listeIngredient{
+        padding: 10px;
+        margin: 3px;
+        text-align: center;
+        border-radius: 10px;
+        width: 200px;
+        margin: auto;
+        height: 20vh;
+        background: white;
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .listeIngredient:hover{
+        transform: scale(1.1);
+      }
+
+      .recipeFormContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        margin: 50px;
+      }
+
+      .addRecipe{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .addRecipe input{
+        margin-bottom: 5px;
+        padding: 5px;
+        outline: 0;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+      }
+
+      .addRecipe input:focus{
+        border: 1px solid green;
+      }
+
+      .addRecipe label{
+        margin-bottom: 6px;
+      }
+
+      .addRecipe button{
+        margin: 5px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+      }
+
+      .addRecipe button:hover{
+        background-color: white;
+        color: black;
+        transition: 1s;
+      }
+
+      .ingredientFormContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        margin: 50px;
+      }
+
+      .addIngredient{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .addIngredient input{
+        margin-bottom: 5px;
+        padding: 5px;
+        outline: 0;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+      }
+
+      .addIngredient input:focus{
+        border: 1px solid green;
+      }
+
+      .addIngredient label{
+        margin-bottom: 6px;
+      }
+
+      .addIngredient button{
+        margin: 5px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+      }
+
+      .addIngredient button:hover{
+        background-color: white;
+        color: black;
+        transition: 1s;
+      }
+
+      .selectIngredientCompo select{
+        border-radius: 5px;
+        margin-left: 145px;
+        width: 270px;
+        background-color: white;
+      }
+
+    .mesRecettes img{
+        width: 100%;
+        height: 290px;
+    }
+
+    .mesRecipes{
+        width: 100%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .mesRecettes{
+        padding: 10px;
+        margin: 3px;
+        text-align: center;
+        border-radius: 5px;
+        width: 75%;
+        margin: auto;
+        height: 65vh;
+        margin-top: 5%;
+        background: white;
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .mesRecettes ul li{
+        list-style-type: none;
+    }
+
+    .mesRecettes:hover{
+        background-color: black;
+        color: white;
+        transition: 1s;
+    }
+
+    .listeGroceries{
+        width: 50%;
+        margin: auto;
+        height: 80vh;
+        margin-top: 5%;
+        background: white;
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+    }
+
+    .listGrocerie ul li{
+        list-style-type: none;
+        display: block;
+        margin-left: 120px;
+    }
+    
+    #listeGrocerie {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .searchBar{
+        width: 300px;
+        margin: auto;
+      }
+
+      .searchBar input{
+        width: 300px;
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 30px;
+        outline: none;
+      }
+
+      #recetteFav{
+        text-align: center;
+        font-size: 25px;
+        animation: text 3s 1;
+    }
+
+      @keyframes text {
+        0%{
+            color: black;
+            margin-bottom: -40px;
+        }
+        30%{
+            letter-spacing: 25px;
+            margin-bottom: -40px;
+        }
+        85%{
+            letter-spacing: 8px;
+            margin-bottom: -40px;
+        }
+      }
+
+      .listeRecetteFav{
+        padding: 10px;
+        margin: 3px;
+        text-align: center;
+        border-radius: 5px;
+        max-width: 75%;
+        margin: auto;
+        height: 50vh;
+        margin-top: 5%;
+        background: white;
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .listesRecettesFav{
+        width: 100%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      
+
+      .listeRecetteFav #imageRecette{
+        width: 100%;
+        height: 290px;
+      }
+
+      .listeRecetteFav:hover{
+        background-color: black;
+        color: white;
+        transition: 1s;
+    }
+
+    .espaceComment h1{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .commentaire button{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+      width: 100px;
+      padding: 10px;
+      margin-left: 120px;
+      outline: none;
+    }
+
+    .commentaire button:hover{
+      background-color: white;
+      color: black;
+      border: solid 1px black;
+      transition: 1s;
+    }
+
+    .commentaire textarea{
+        padding: 10px;
+        max-width: 100%;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #999;
+        margin-bottom: 15px;
+    }
+    

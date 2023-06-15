@@ -1,0 +1,10 @@
+1-Ajouter une image a la recette
+2-Ajouter une image a un ingredient
+3-Creation de la page de login
+4-Creation de la page d'inscription
+5-Afficher les details d'une recette
+6-Creation de la page de liste d'epicerie
+7-Ajouter une recette a la liste d'epicerie
+8-Créer un ingredient a la liste
+9-Ajouter un formulaire d'étape d'une recette 
+10-Afficher la liste des ingredients d'une recette
